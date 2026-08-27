@@ -24,7 +24,18 @@
         </tr>
 
         <?php
-        
+            include 'infra/conexao.php';
+            $sql = "SELECT * FROM restaurante";
+            $restaurantes = $conn->query($sql);
+            while ($row = $restaurantes->fetch_assoc()) {
+                echo "<tr>";
+                echo "<td>" . $row['id'] . "</td>";
+                echo "<td>" . $row['nome'] . "</td>";
+                echo "<td>" . $row['categoria'] . "</td>";
+                echo "<td>" . $row['endereco'] . "</td>";
+                echo "<td>" . $row['telefone'] . "</td>";
+                echo "</tr>";
+            }
         ?>
 
 

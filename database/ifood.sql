@@ -5,7 +5,8 @@ create table if not exists restaurante (
     id int primary key auto_increment,
     nome varchar(100) not null,
     categoria varchar(50) not null,
-    endereco varchar(200) not null,
+    endereco varchar(200) not null,.+
+    
     telefone varchar(15) not null
 );
 
